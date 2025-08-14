@@ -5,7 +5,7 @@ import sys
 from collections import deque
 
 import pygame
-
+import os
 
 try:
     import numpy as np
@@ -16,6 +16,8 @@ except Exception:
 
 WIDTH, HEIGHT = 1280, 720
 FPS = 60
+
+os.environ["SDL_AUDIODRIVER"] = "dummy"
 
 STAGE_COLORS = [
     ((30, 30, 45), (70, 100, 140)),   
